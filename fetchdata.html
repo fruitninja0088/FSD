@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>City Image Search (Unsplash API)</title>
+</head>
+<body>
+    <nav class="bg-gray-800 text-white p-4">
+    <div class="flex items-center justify-between">
+        <span class="flex items-center gap-2 font-bold text-xl">
+        <a href="home.html"><i class="fa-solid fa-home"></i></a>
+        </span>
+        </div>
+</nav>
+  <h2>Search City Images</h2>
+  <input type="text" id="search" placeholder="Type a city..." style="margin-bottom:10px; padding:6px; border-radius:4px;">
+  <button onclick="searchCityImage()">Show Image</button>
+  <div id="places"></div>
+
+  <script>
+    function searchCityImage() {
+      const value = document.getElementById('search').value.trim();
+      const placesDiv = document.getElementById('places');
+      placesDiv.innerHTML = '';
+      if (value) {
+        const img = document.createElement('img');
+        img.src = `https://source.unsplash.com/400x240/?${encodeURIComponent(value)}`;
+        img.alt = value;
+        img.style.display = "block";
+        img.style.margin = "20px auto";
+        img.style.borderRadius = "8px";
+        img.style.maxWidth = "100%";
+        placesDiv.appendChild(img);
+      }
+    }
+    // Optional: Show image as you type
+    document.getElementById('search').addEventListener('input', searchCityImage);
+  </script>
+</body>
+</html>

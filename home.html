@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body style="background-image: url('travelimg.jpg'); background-size: cover; background-position: center;">
+    <p class="text-3xl font-bold" align="center">explore</p>
+    <p class="text-2xl" align="center">your favorite place to go</p>
+    <nav class="bg-gray-800 text-white p-4">
+      <div class="flex items-center justify-between">
+        <button id="menu-btn" class="text-2xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <ul id="menu" class="hidden mt-4 space-y-2 md:space-y-0 md:space-x-6 ">
+        <li><a href="fetchdata.html" class="text-blue-400"><i class="fa-solid fa-user"></i></a></li>
+        <li><a href="contactus.html" class="text-blue-400"><i class="fa-solid fa-phone"></i></a></li>
+        <li><a href="galary.html" class="text-blue-400"><i class="fa-solid fa-images"></i></a></li>
+      </ul>
+    </nav>
+    <video controls autoplay muted loop class="w-1/2  flex flex-containe justify-content items-center mx-auto my-8">
+      <source src="https://media.istockphoto.com/id/663894440/video/shibuya-crossing-time-lapse.mp4?s=mp4-640x640-is&k=20&c=nsrPPEEoGvc2QPa5jTyZDyTULCA4mIGUxv_wx6CN0J0=" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <script>
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('menu');
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    </script>
+    <section class="bg-blue-500 p-8 flex flex-col items-center ">
+      <h1 class="text-4xl font-bold text-center">explore</h1>
+      <p class="text-center mt-4">beautiful destinations to explore</p>
+      <button id="learnmore" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Learn More</button>
+    </section>
+    <section class="p-6">
+      <h2 class="text-2xl font-semibold mb-2">Background Music</h2>
+      <audio controls>
+        <source src="file_example_MP3_700KB.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+    <footer class="bg-gray-900 text-white flex flex-col items-center py-4 mt-8">
+      <span class="mb-2">© travel.com</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+        <path stroke="currentColor" stroke-width="2" d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+      </svg>
+    </footer>
+  </body>
+</html>
